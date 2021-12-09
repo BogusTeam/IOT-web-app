@@ -8,18 +8,19 @@ function connect() {
     });
 }
 
-function sendName() {
+document.getElementById("motionOne").addEventListener("click", e => {
+    send(0, "1");
+});
+
+document.getElementById("voltageChange").addEventListener("click", e => {
+   send(2, document.getElementById("voltageQuantity").value);
+});
+
+function send(deviceId, value) {
     stompClient.send("/app/send", {}, JSON.stringify({
-        'deviceId': document.getElementById("name").innerText,
-        'value': document.getElementById("orig_name").innerText
+        'deviceId': deviceId,
+        'value': value
     }));
 }
 
-$(function () {
-    $("#send_button").click(function () {
-        sendName();
-    });
-});
-
 connect();
-window.scrollTo(0, document.body.scrollHeight);
