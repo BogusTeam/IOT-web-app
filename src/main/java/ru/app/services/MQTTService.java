@@ -31,7 +31,7 @@ public class MQTTService {
             device = "voltage";
         }
         mqttPushClient.publish(0, false, mqttConfig.getDefaultTopic(),
-                "{" + MessageFormat.format("\"{0}\": {1}, \"datetime\": \"{2}\"",
+                "{" + MessageFormat.format("\"device\": \"{0}\", \"value\": \"{1}\", \"datetime\": \"{2}\"",
                         device, message.getValue(), datetime) + "}");
     }
 }
