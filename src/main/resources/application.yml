@@ -14,3 +14,11 @@ spring:
     basename: validation
 server:
   port: 80
+mqtt:
+  username: lEtZ0LvBAkGaYIXz2PCK
+  password: ''
+  host-url: tcp://demo.thingsboard.io:1883	    # The address and port of your own server need to be changed
+  clientID: mqtt-client-2317					# This change is not optional, but different clients must not be the same
+  default-topic: v1/devices/me/telemetry	    # Default theme
+  timeout: 100
+  keepalive: 100
