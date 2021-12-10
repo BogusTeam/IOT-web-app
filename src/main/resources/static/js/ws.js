@@ -9,7 +9,7 @@ function connect() {
 }
 
 document.getElementById("motionOne").addEventListener("click", e => {
-    send(0, "1");
+    send(0, "5");
 });
 
 document.getElementById("voltageChange").addEventListener("click", e => {

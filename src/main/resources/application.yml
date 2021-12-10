@@ -22,3 +22,6 @@ mqtt:
   default-topic: v1/devices/me/telemetry	    # Default theme
   timeout: 100
   keepalive: 100
+sensors:
+  motion: 'lEtZ0LvBAkGaYIXz2PCK'
+  voltage: 'reXKyNioBkbKhB57xZTc'

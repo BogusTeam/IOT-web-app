@@ -45,7 +45,6 @@ public class MQTTPushClient {
             client = new MqttClient(host, clientID, new MemoryPersistence());
             MqttConnectionOptions options = new MqttConnectionOptions();
             options.setCleanStart(true);
-//            options.setAutomaticReconnect(true);
             options.setUserName(username);
             options.setPassword(password.getBytes());
             options.setConnectionTimeout(timeout);
